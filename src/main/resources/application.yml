@@ -1,0 +1,28 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /cms
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 985211
+#    url:
+    url: jdbc:mysql://localhost:3306/cms?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=utf8
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: Asia/Shanghai
+
+logging:
+  level:
+    com:
+      luxin:
+        mapper: debug
+
+mybatis:
+  mapper-locations: com/luxin/mapper/*.xml
+
+# 分页插件
+pagehelper:
+  helper-dialect: mysql
